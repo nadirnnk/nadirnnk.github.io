@@ -1,0 +1,261 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap');
+html{
+  background-color: rgba(232, 229, 226, 0.89);
+}
+body, ul, li, h1, a{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+  }
+  p{
+    font-size: 18px;
+  }
+  header{
+    position: fixed;
+    text-align: right;
+    position: fixed;
+    
+    width: 100%;
+    z-index: 1;
+  }
+
+  nav{
+    background: #ffffff;
+    height: 50px;
+    padding: 0%;
+  }
+  nav ul{
+    white-space: nowrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: right;
+  }
+  nav li{
+    width: 15%;
+    display: inline-block;
+    font-size: 20px;
+  }
+  nav li a{
+    text-decoration: none;
+    color: #4B4B4B;
+  }
+  nav li a:hover{
+    text-decoration: underline;
+  }
+  nav li a.join{
+    color: #F63232;
+  }
+  .banner{
+    
+    position: relative;
+    background:#000000;
+    height: 600px;
+  }
+  .banner img{
+    max-width: 100%;
+    height: inherit;
+    object-fit: fill;
+  }
+  .banner .welcome{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+    padding: 30px;
+    font-size: 60px;
+    position: absolute;
+    left: 45px;
+    top: 10%;
+  } 
+  .banner .welcome span{
+    font-size: 1.4em;
+  }
+
+  main{
+    max-width: 100%;
+    width: 1500px;
+    margin: 80px auto;
+    padding: 0 40px;
+    box-sizing: border-box;
+  }
+  
+  article h2{
+    color: #F63232;
+    font-size: 48px;
+  }
+  article p{
+    height: 250px;
+    line-height: 2em;
+    color: #4B4B4B;    
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+  }
+  article p span img{
+    border-radius: 1000px;
+    width: 300PX;
+    padding: 50px;
+  }
+  article p::first-line{
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  .Skills h3{
+    font-size: 48px;
+    margin-bottom: 20px;
+  }
+  .images{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    top: 100px;
+    text-align: center;
+    white-space: nowrap;
+  }
+  .images li{
+    display: inline-block;
+    list-style-type: none;
+    position: relative;
+  }
+  .images li:hover{
+    top: -4px;
+  }
+  .images li img{
+    width: 100px;
+    padding: 35px;
+    height: inherit;
+  
+  }
+  .images li img.C{
+    width: 100px;
+    
+    height: inherit;
+  }
+  .images li img.python{
+    width: 100px;
+    
+    height: inherit;
+  }
+  .images li img.MATLAB{
+    width: 200px;
+    
+    height: inherit;
+  }
+  .images li img.html{
+    height: 150px;
+    
+    width: initial;
+  }
+  .images li img.FPGA{
+    height: 150px;
+    
+    width: initial;
+  }
+  .images li img.Keil{
+    width: 200px;
+    padding-bottom: 59px;
+    height: inherit;
+  }
+  section.join{
+    background: #F4F4F4;
+    text-align: center;
+    padding: 60px 20px;
+    color: #4B4B4B;
+  }
+  section.join h2{
+    font-size: 36px;
+  }
+  form input{
+    margin: 20px 0;
+    padding: 10px 20px;
+    font-size: 24px;
+    border-radius: 28px;
+    border: 4px solid white;
+  }
+  form input:focus{
+    border: 4px dashed #4B4B4B;
+    outline: none;
+  }
+  form input:valid{
+    border: 4px solid #71d300;
+  }
+  footer{
+    background: #F63232;
+    color: white;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  /* responsive styles */
+  
+  @media screen and (max-width: 1400px){
+  
+    .banner .welcome{
+      font-family: Arial, Helvetica, sans-serif;
+      font-size: 40px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 960px){
+  
+    .banner .welcome{
+      font-size: 28px;
+    }
+    nav li{
+      font-size: 18px;
+    }
+  
+  }
+  
+  @media screen and (max-width: 700px){
+  
+    .banner .welcome{
+      font-size: 20px;
+      position: relative;
+      text-align: center;
+    }
+    .banner .welcome br{
+      display: none;
+    }
+    .banner .welcome span{
+      font-size: 1em;
+    }
+    nav li{
+      font-size: 18px;
+    }
+    .images li{
+      width: 100%;
+      display: block;
+      margin: 20px auto;
+    }
+  
+  }
+  
+  @media screen and (max-width: 560px){
+  
+    .banner .welcome{
+      font-size: 20px;
+      position: relative;
+      text-align: center;
+    }
+    .banner .welcome br{
+      display: none;
+    }
+    .banner .welcome span{
+      font-size: 1em;
+    }
+    nav li{
+      display: block;
+      width: 100%;
+      margin: 12px 0;
+    }
+    article h2{
+      font-size: 36px;
+    }
+    header, nav{
+      position: relative;
+      top: 0;
+    }
+    
+  
+  }
