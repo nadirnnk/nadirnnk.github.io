@@ -45,6 +45,46 @@
     text-align: center;
     position: relative;
   }
+
+  .project-card {
+    display: flex;
+    align-items: flex-start;
+    margin-bottom: 30px;
+    gap: 20px;
+    flex-wrap: wrap;
+  }
+  
+  .project-img {
+    width: 150px;
+    height: auto;
+    border-radius: 8px;
+    object-fit: cover;
+    flex-shrink: 0;
+  }
+  
+  .project-info {
+    flex: 1;
+    min-width: 200px;
+  }
+  
+  .project-info h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+  }
+  
+  .project-info p {
+    margin: 5px 0 10px;
+  }
+  
+  .project-info a {
+    color: var(--link-color);
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .project-info a:hover {
+    text-decoration: underline;
+  }  
   
   h1 {
     margin-bottom: 0;
