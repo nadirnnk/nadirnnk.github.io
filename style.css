@@ -1,0 +1,89 @@
+:root {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --link-color: #1a0dab;
+  }
+  
+  body.dark-mode {
+    --bg-color: #121212;
+    --text-color: #f0f0f0;
+    --link-color: #8ab4f8;
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  header, section, footer {
+    padding: 20px;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  header {
+    background: var(--bg-color);
+    text-align: center;
+    position: relative;
+  }
+  
+  h1 {
+    margin-bottom: 0;
+  }
+  
+  h2 {
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 5px;
+  }
+  
+  .project, .experience {
+    margin-bottom: 15px;
+  }
+  
+  footer {
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    color: var(--text-color);
+  }
+  
+  a {
+    color: var(--link-color);
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .toggle-btn {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    padding: 8px 12px;
+    background: none;
+    border: 1px solid var(--text-color);
+    border-radius: 5px;
+    color: var(--text-color);
+    cursor: pointer;
+    font-size: 0.9em;
+  }
+  
+  @media (max-width: 600px) {
+    header, section, footer {
+      padding: 15px;
+    }
+  
+    .toggle-btn {
+      top: 10px;
+      right: 10px;
+      padding: 6px 10px;
+      font-size: 0.8em;
+    }
+  }
+  
