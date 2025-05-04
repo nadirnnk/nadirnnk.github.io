@@ -1,145 +1,176 @@
+/* ──────────────────────────────────────────────
+   Global Styles & Theme Variables
+────────────────────────────────────────────── */
 :root {
-    --bg-color: #ffffff;
-    --text-color: #000000;
-    --link-color: #1a0dab;
-  }
-  
-  body.dark-mode {
-    --bg-color: #121212;
-    --text-color: #f0f0f0;
-    --link-color: #8ab4f8;
-  }
-  
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Segoe UI', sans-serif;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-    line-height: 1.6;
-    transition: background-color 0.3s, color 0.3s;
-  }
-  .social-links {
-    margin-top: 10px;
-  }
-  
-  .social-links a {
-    margin: 0 10px;
-    color: var(--text-color);
-    font-size: 1.4em;
-    transition: color 0.3s;
-  }
-  
-  .social-links a:hover {
-    color: var(--link-color);
-  }
-  
+  --bg-color: #ffffff;
+  --text-color: #313030;
+  --link-color: #1a0dab;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #A9A9A9;
+  --link-color: #8ab4f8;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Manrope', sans-serif;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+header, section, footer {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+h1 {
+  margin-bottom: 0;
+}
+
+h2 {
+  border-bottom: 1px solid #aaa;
+  padding-bottom: 5px;
+  margin-top: 40px;
+}
+
+/* ──────────────────────────────────────────────
+   Theme Toggle Button
+────────────────────────────────────────────── */
+.toggle-btn {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  padding: 8px 12px;
+  background: none;
+  border: 1px solid var(--text-color);
+  border-radius: 5px;
+  color: var(--text-color);
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+/* ──────────────────────────────────────────────
+   Social Links Below Name
+────────────────────────────────────────────── */
+.social-links {
+  margin-top: 10px;
+}
+
+.social-links a {
+  margin: 0 10px;
+  color: var(--text-color);
+  font-size: 1.4em;
+  transition: color 0.3s;
+}
+
+.social-links a:hover {
+  color: var(--link-color);
+}
+
+/* ──────────────────────────────────────────────
+   Footer
+────────────────────────────────────────────── */
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 0.9em;
+  color: var(--text-color);
+}
+
+/*resume link styple*/
+
+.resume-link {
+  font-weight: 600;
+  color: var(--link-color);
+  text-decoration: none;
+}
+
+.resume-link:hover {
+  text-decoration: underline; 
+}
+
+
+/* ──────────────────────────────────────────────
+   Projects Layout (right title, center image, left description)
+────────────────────────────────────────────── */
+.project-block {
+  margin-bottom: 50px;
+}
+
+.project-title {
+  text-align: left;
+  margin: 0 0 10px;
+  font-size: 1.4em;
+}
+
+.project-image-wrapper {
+  display: flex;
+  justify-content: center;
+  gap: 10px; /* 👈 this adds space between images */
+  margin: 10px 0;
+  flex-wrap: wrap;
+}
+
+
+.project-image {
+  width: 100%;
+  max-height: 200px;
+  width: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.project-description {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  font-size: 1em;
+}
+
+.project-description a {
+  color: var(--link-color);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.project-description a:hover {
+  text-decoration: underline;
+}
+
+/* ──────────────────────────────────────────────
+   Responsive Design
+────────────────────────────────────────────── */
+@media (max-width: 600px) {
   header, section, footer {
-    padding: 20px;
-    max-width: 800px;
-    margin: auto;
-  }
-  
-  header {
-    background: var(--bg-color);
-    text-align: center;
-    position: relative;
+    padding: 15px;
   }
 
-  .project-card {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-    gap: 20px;
-    flex-wrap: wrap;
-  }
-  
-/* Stack each image and add spacing */
-.project-img {
-  display: block;
-  width: 100%;
-  max-width: 200px;      /* adjust as needed */
-  margin-bottom: 1rem;
-  border-radius: 4px;
-  object-fit: cover;
-}
-  
-  .project-info {
-    flex: 1;
-    min-width: 200px;
-  }
-  
-  .project-info h3 {
-    margin-top: 0;
-    font-size: 1.2em;
-  }
-  
-  .project-info p {
-    margin: 5px 0 10px;
-  }
-  
-  .project-info a {
-    color: var(--link-color);
-    text-decoration: none;
-    font-weight: bold;
-  }
-  
-  .project-info a:hover {
-    text-decoration: underline;
-  }  
-  
-  h1 {
-    margin-bottom: 0;
-  }
-  
-  h2 {
-    border-bottom: 1px solid #aaa;
-    padding-bottom: 5px;
-  }
-  
-  .project, .experience {
-    margin-bottom: 15px;
-  }
-  
-  footer {
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    color: var(--text-color);
-  }
-  
-  a {
-    color: var(--link-color);
-    text-decoration: none;
-  }
-  
-  a:hover {
-    text-decoration: underline;
-  }
-  
   .toggle-btn {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    padding: 8px 12px;
-    background: none;
-    border: 1px solid var(--text-color);
-    border-radius: 5px;
-    color: var(--text-color);
-    cursor: pointer;
-    font-size: 0.9em;
+    top: 10px;
+    right: 10px;
+    padding: 6px 10px;
+    font-size: 0.8em;
   }
-  
-  @media (max-width: 600px) {
-    header, section, footer {
-      padding: 15px;
-    }
-  
-    .toggle-btn {
-      top: 10px;
-      right: 10px;
-      padding: 6px 10px;
-      font-size: 0.8em;
-    }
+
+  .project-title {
+    text-align: center;
   }
-  
+
+  .project-description {
+    padding: 0 10px;
+  }
+
+/* toglle button */
+
+
+/* Theme Toggle Slider */
+
+
+}
