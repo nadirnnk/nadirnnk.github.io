@@ -1,3 +1,6 @@
+/* ──────────────────────────────────────────────
+   Theme Variables
+────────────────────────────────────────────── */
 :root {
   --bg-color: #ffffff;
   --text-color: #000000;
@@ -10,6 +13,9 @@ body.dark-mode {
   --link-color: #8ab4f8;
 }
 
+/* ──────────────────────────────────────────────
+   Base Styling
+────────────────────────────────────────────── */
 body {
   margin: 0;
   padding: 0;
@@ -20,7 +26,6 @@ body {
   line-height: 1.6;
 }
 
-/* Header and Sections */
 header, section, footer {
   padding: 20px;
   max-width: 900px;
@@ -37,9 +42,13 @@ h2 {
   border-bottom: 1px solid #aaa;
   padding-bottom: 5px;
   margin-top: 40px;
+  font-size: 1.6em;
+  text-align: left;
 }
 
-/* Social Links */
+/* ──────────────────────────────────────────────
+   Social Links
+────────────────────────────────────────────── */
 .social-links {
   margin-top: 10px;
   text-align: center;
@@ -56,7 +65,9 @@ h2 {
   color: var(--link-color);
 }
 
-/* Resume Link */
+/* ──────────────────────────────────────────────
+   Resume Link
+────────────────────────────────────────────── */
 .resume-link {
   font-weight: 600;
   color: var(--link-color);
@@ -67,7 +78,9 @@ h2 {
   text-decoration: underline;
 }
 
-/* Projects Section */
+/* ──────────────────────────────────────────────
+   Projects Section
+────────────────────────────────────────────── */
 .project-block {
   margin-bottom: 50px;
 }
@@ -86,6 +99,15 @@ h2 {
   margin-bottom: 15px;
 }
 
+.project-image {
+  max-width: 100%;
+  width: 300px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+/* Custom Sizes for Individual Projects */
 .project1-img {
   width: 200px;
 }
@@ -94,6 +116,7 @@ h2 {
   width: 100%;
   max-width: 500px;
 }
+
 .project-description {
   text-align: left;
   font-size: 1em;
@@ -111,7 +134,9 @@ h2 {
   text-decoration: underline;
 }
 
-/* Footer */
+/* ──────────────────────────────────────────────
+   Footer
+────────────────────────────────────────────── */
 footer {
   text-align: center;
   padding: 20px;
@@ -119,7 +144,9 @@ footer {
   color: var(--text-color);
 }
 
-/* Fancy Toggle Switch */
+/* ──────────────────────────────────────────────
+   Fancy Theme Toggle Switch
+────────────────────────────────────────────── */
 .fancy-toggle {
   position: absolute;
   top: 20px;
@@ -167,14 +194,22 @@ footer {
   color: #f1f1f1;
 }
 
-/* Mobile Responsive */
+/* ──────────────────────────────────────────────
+   Mobile Responsive Styles
+────────────────────────────────────────────── */
 @media (max-width: 600px) {
   header, section, footer {
     padding: 15px;
   }
 
   h1 {
-    font-size: 1.6em;
+    font-size: 1.5em;
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 1.2em;
+    text-align: center;
   }
 
   .fancy-toggle {
@@ -183,16 +218,45 @@ footer {
     transform: scale(0.85);
   }
 
-  .project-title {
+  .social-links {
     text-align: center;
+    margin-top: 10px;
   }
 
-  .project-description {
-    padding: 0 10px;
+  .social-links a {
+    font-size: 1.2em;
+    margin: 0 8px;
+  }
+
+  .project-title {
+    text-align: center;
+    font-size: 1.1em;
+  }
+
+  .project-image-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
   }
 
   .project-image {
     width: 100%;
-    max-width: 100%;
+    max-width: 90vw;
+    height: auto;
+  }
+
+  .project1-img {
+    width: 80%;
+    max-width: 200px;
+  }
+
+  .project2-img {
+    width: 100%;
+    max-width: 90vw;
+  }
+
+  .project-description {
+    padding: 0 10px;
+    font-size: 0.95em;
   }
 }
