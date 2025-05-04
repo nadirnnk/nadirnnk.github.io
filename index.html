@@ -1,37 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Nadir Najeeb Kassim | Portfolio</title>
-  
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-    <!-- External CSS -->
-    <link rel="stylesheet" href="style.css" />
-  
-    <!-- Font Awesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  </head>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Nadir Najeeb Kassim | Portfolio</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
 <body>
 
   <header>
-    <button class="toggle-btn" onclick="toggleMode()">Toggle Mode</button>
-    
+    <label class="fancy-toggle">
+      <input type="checkbox" id="theme-toggle" onchange="toggleMode()" />
+      <span class="slider">
+        <span class="knob">
+          <i class="fas fa-sun"></i>
+        </span>
+      </span>
+    </label>
+
     <h1>Nadir Najeeb Kassim</h1>
     <p>Machine Learning Engineer | Deep Learning Enthusiast</p>
 
     <div class="social-links">
-      <a href="mailto:nadir@example.com" target="_blank" aria-label="Email">
-        <i class="fas fa-envelope"></i>
-      </a>
-      <a href="https://github.com/nadirnajeeb" target="_blank" aria-label="GitHub">
-        <i class="fab fa-github"></i>
-      </a>
-      <a href="https://linkedin.com/in/nadirnajeeb" target="_blank" aria-label="LinkedIn">
-        <i class="fab fa-linkedin"></i>
-      </a>
+      <a href="mailto:nadir@example.com" target="_blank" aria-label="Email"><i class="fas fa-envelope"></i></a>
+      <a href="https://github.com/nadirnajeeb" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://linkedin.com/in/nadirnajeeb" target="_blank" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
     </div>
   </header>
 
@@ -39,7 +40,6 @@
     <h2>About Me</h2>
     <p>
       Hi, I’m <strong>Nadir Najeeb Kassim</strong> 👋<br>
-    </p>
       Welcome to my personal website! I'm a Machine Learning Engineer with a passion for exploring different deep learning methods. I enjoy building intelligent systems, exploring new technologies, and turning complex ideas into practical solutions.
     </p>
     <p>
@@ -49,10 +49,7 @@
       Take a look at my projects, explore my interests, or connect with me — I’m always open to collaboration and learning.
     </p>
     <p>
-      👉
-      <a href="files/Nadir_Najeeb_Kassim_Resume.pdf" target="_blank" class="resume-link">
-         Click here to see my resume
-      </a>
+      <a href="Nadir_Najeeb_Kassim_Resume.pdf" target="_blank" class="resume-link">👉 Click here to see my resume</a>
     </p>
   </section>
 
@@ -62,36 +59,27 @@
     <div class="project-block">
       <h3 class="project-title">Revamping MobileNetV3 for Efficient Facial Segmentation</h3>
       <div class="project-image-wrapper">
-        <img src="images/6401.png" alt="Revamping MobileNetV3 for Efficient Facial Segmentation" class="project-image">
-        <img src="images/6401_gt.jpg" alt="Revamping MobileNetV3 for Efficient Facial Segmentation" class="project-image">
+        <img src="images/6401.png" alt="Segmentation 1" class="project1-img">
+        <img src="images/6401_gt.jpg" alt="Segmentation GT" class="project1-img">
       </div>
       <p class="project-description">
-        To evaluate MobileNetV3-Large for high-fidelity facial segmentation under a strict 3 M-parameter budget and with only 5 000 training images, we set out to determine whether targeted architectural tweaks and regularization could deliver state-of-the-art performance on a modest dataset.
-We applied aggressive regularization—including L2 weight decay, random flips, crops, and color jitter—alongside 4-fold cross-validation to reduce overfitting. To further enhance feature learning and gradient flow, we replaced hard-Swish with the smoother Mish activation and integrated a lightweight LR-ASPP decoder for multi-scale context aggregation. These changes were designed to maximize the model’s generalization ability and maintain real-time, on-device inference capability.
-Despite the limited training set, our enhanced MobileNetV3-Large achieved a mean F1 score of 0.875 and a mean IoU of 0.719, up from 0.745 and 0.590 respectively with the unmodified backbone. This demonstrates that, even with only 5 000 images and a sub-5 M-parameter footprint, MobileNetV3 can deliver high-precision, efficient facial segmentation when paired with thoughtful regularization and architectural improvements.
+        This project evaluates MobileNetV3-Large for facial segmentation under a strict 3M-parameter budget and 5,000 images. With Mish activations, LR-ASPP decoder, and cross-validation, we reached F1 = 0.875 and IoU = 0.719, outperforming the baseline by a large margin.
         <br><br>
-        <a href="https://github.com/nadirnajeeb/smart-object-detector" target="_blank">
-          <i class="fab fa-github"></i> View on GitHub
-        </a>
+        <a href="https://github.com/nadirnajeeb/smart-object-detector" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
       </p>
     </div>
 
     <div class="project-block">
       <h3 class="project-title">RAG-Based Low-Level CodeGen for QP Problems</h3>
       <div class="project-image-wrapper">
-        <img src="images/rag.jpg" alt="RAG-Based Low-Level CodeGen for QP Problems" class="project-image">
+        <img src="images/rag.jpg" alt="RAG Diagram" class="project2-img">
       </div>
       <p class="project-description">
-        We set out to eliminate the tedium and potential for error in manually translating convex quadratic programs—such as Lasso, SVM, Huber regression, and portfolio optimization—from Python into production-grade C. By combining a generative AI framework with Retrieval-Augmented Generation (RAG), our system automatically parses high-level QP definitions, retrieves solver templates, and emits optimized C code compatible with the OSQP and SCS libraries.
-        This architecture enables rapid iteration: you simply supply your Python formulation, and within seconds receive a complete C implementation tailored to your solver of choice.
-        In rigorous benchmarking across 30+ diverse QP instances, our RAG-driven translator achieved a 93% translation accuracy, consistently producing correct, efficient C routines. By slashing development time and minimizing manual fixes, this project demonstrates how AI can seamlessly bridge the gap between high-level mathematical modeling and low-level, performance-critical code. 
+        We built an AI-assisted translator that takes high-level QP problems and generates efficient C code using RAG with template retrieval. It supports OSQP & SCS and achieved 93% accuracy across 30+ test cases.
         <br><br>
-        <a href="https://github.com/nadirnajeeb/smart-object-detector" target="_blank">
-          <i class="fab fa-github"></i> View on GitHub
-        </a>
+        <a href="https://github.com/nadirnajeeb/smart-object-detector" target="_blank"><i class="fab fa-github"></i> View on GitHub</a>
       </p>
     </div>
-    <!-- Add more project-blocks here -->
 
   </section>
 
@@ -99,8 +87,6 @@ Despite the limited training set, our enhanced MobileNetV3-Large achieved a mean
     &copy; 2025 Nadir Najeeb Kassim. All rights reserved.
   </footer>
 
-  <!-- Link to JavaScript -->
   <script src="script.js"></script>
-
 </body>
 </html>
