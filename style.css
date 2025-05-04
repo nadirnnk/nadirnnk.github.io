@@ -54,13 +54,15 @@
     flex-wrap: wrap;
   }
   
-  .project-img {
-    width: 150px;
-    height: auto;
-    border-radius: 8px;
-    object-fit: cover;
-    flex-shrink: 0;
-  }
+/* Stack each image and add spacing */
+.project-img {
+  display: block;
+  width: 100%;
+  max-width: 200px;      /* adjust as needed */
+  margin-bottom: 1rem;
+  border-radius: 4px;
+  object-fit: cover;
+}
   
   .project-info {
     flex: 1;

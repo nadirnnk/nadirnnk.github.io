@@ -57,6 +57,24 @@
       </div>
     </div>
 
+    <div class="project-card">
+      <div class="project-images">
+        <img src="6401.png"    alt="Project 2 Input" class="project-img" />
+        <img src="6401_gt.jpg" alt="Project 2 Ground Truth" class="project-img" />
+      </div>
+      <div class="project-info">
+        <h3>Revamping MobileNet-V3 for Facial Segmentation</h3>
+        <p>
+          To evaluate MobileNetV3-Large for high-fidelity facial segmentation under a strict 3 M-parameter budget and with only 5 000 training images, we set out to determine whether targeted architectural tweaks and regularization could deliver state-of-the-art performance on a modest dataset.
+          We applied aggressive regularization—including L2 weight decay, random flips, crops, and color jitter—alongside 4-fold cross-validation to reduce overfitting. To further enhance feature learning and gradient flow, we replaced hard-Swish with the smoother Mish activation and integrated a lightweight LR-ASPP decoder for multi-scale context aggregation. These changes were designed to maximize the model’s generalization ability and maintain real-time, on-device inference capability.
+          Despite the limited training set, our enhanced MobileNetV3-Large achieved a mean F1 score of 0.875 and a mean IoU of 0.719, up from 0.745 and 0.590 respectively with the unmodified backbone. This demonstrates that, even with only 5 000 images and a sub-5 M-parameter footprint, MobileNetV3 can deliver high-precision, efficient facial segmentation when paired with thoughtful regularization and architectural improvements.
+        </p>
+        <a href="https://github.com/yourusername/smart-object-detector" target="_blank">
+          <i class="fab fa-github"></i> View on GitHub
+        </a>
+      </div>
+    </div>
+
   <section>
     <h2>Experience</h2>
     <div class="experience">
